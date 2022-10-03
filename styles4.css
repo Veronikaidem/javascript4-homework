@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+   padding: 0;
+   list-style-type: none;
+   text-decoration: none;
+   box-sizing: border-box; 
+   outline: none;
+}
+
+
+h2{
+   text-align: center;
+}
+form, .ul-items, .clear-all{
+  margin: 50px auto;
+  margin-left: 500px;
+}
+form input{
+   width: 200px;
+   padding: 10px;
+   border-radius: 20px;
+   background-color: rgba(0, 0, 0, 0.3);
+}
+input::placeholder{
+   color: #000;
+}
+.btn-add{
+   background-color: rgba(0, 0, 0, 0.3);
+   border-radius: 20px;
+   padding: 10px;
+
+}
+
+ul{
+ 
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   line-height: 20px;
+   gap: 5px;
+   margin: 10px;
+}
+
+
+
+li{
+   color: rgb(22, 22, 28);
+   font-size: 19px;
+   list-style-type: none;
+
+}
+
+.fa-trash::before {
+   color: rgb(39, 176, 64);
+   font-size: 10px;
+   font-weight: 700;
+  
+   
+}
+
+.clear-all{
+   margin-left: 600px;
+   background-color: rgba(0, 0, 0, 0.3);
+   border-radius: 50px;
+   padding: 5px 10px;
+}
+
+
+/* /////// burger menu */
+
+
+.navigation-wraper{
+   display: flex;
+   justify-content: space-between;
+   background-color: cadetblue;
+   padding: 15px;
+   position: relative;
+
+
+}
+
+#nav-ul{
+   display: flex;
+   
+}
+
+
+#burgerBar {
+   position: absolute;
+   top:15px;
+   right: 20px;
+   color: red;
+   font-size: 25px;
+    display: none;
+ }
+
+
+@media (max-width: 480px) {
+
+   .navigation{
+       display: none;
+   }
+   .navigation a{
+       display: block;
+       font-size: 20px;
+      color: rgb(62, 13, 62);
+   }
+
+   .navigation-wraper{
+       display: flex;
+       justify-content: space-between;
+       background-color: rgb(183, 185, 185);
+       padding: 15px;
+       position: relative;
+   }
+   
+
+    #burgerBar{
+       display: block; 
+   }
+
+   .navigation-wraper{
+       flex-direction: column;
+      
+   }
+
+   /* burger bar toggle-menu with animation */
+   .toggle-menu{
+       position: fixed;
+       top: 10px;
+       right: 20px;
+       width: 30px;
+       height: 30px;
+       cursor: pointer;
+       border: 2px solid red;
+       z-index: 100;
+   }
+.line{
+   width: 80%;
+   height: 2px;
+   background-color: #fff;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, 50%);
+   transition: all 0.3s linear;
+}
+
+.line1{
+   top: 30%;
+
+}
+.line3{
+   top: 70%;
+}
+
+.toggleActive .line1{
+   top: 50%;
+   transform: translate(-50%, -50%) rotate(45deg);
+}
+.toggleActive .line2{
+   display: none;
+}
+
+.toggleActive .line3{
+   top: 50%;
+   transform: translate(-50%, -50%) rotate(-45deg);
+   
+}
+
+   #nav-ul{
+       flex-direction: column;
+       align-items: center;
+   }
+   .active{
+       display: block;
+   }
+
+  
+  .ul-items, .clear-all, form, .ul-items, .clear-all{
+   
+     margin-left: 80px;
+   
+  }
+  
+   
+}
